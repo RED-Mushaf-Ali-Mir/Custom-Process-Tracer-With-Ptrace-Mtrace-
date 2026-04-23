@@ -1,4 +1,11 @@
 #include "Ptracer.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/ptrace.h>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <errno.h>
+#include <sys/user.h>
 #include "SysCalls.h"
 #include "Logs.h"
 

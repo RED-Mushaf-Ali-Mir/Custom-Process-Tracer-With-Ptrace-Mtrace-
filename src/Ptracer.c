@@ -1,4 +1,6 @@
 #include "Ptracer.h"
+#include "SysCalls.h"
+#include "Logs.h"
 
 void do_tracer (pid_t tracee_pid){
     int  status;

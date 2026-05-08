@@ -1,5 +1,6 @@
 #include "Ptracer.h"
 #include "TUI.h"
+#include "Shell.h"
 
 void shell(void){    
     while(1){

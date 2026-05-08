@@ -37,7 +37,7 @@ void do_tracer (pid_t tracee_pid){
             }
 
             printf ("\nTrace syscall  orig_rax = %lld ", regs.orig_rax);
-            log_syscall(regs.orig_rax, get_syscall_name(regs.orig_rax));
+            log_syscall(regs.orig_rax, sysCallName(regs.orig_rax));
 
             ptrace(PTRACE_SYSCALL , tracee_pid , NULL, NULL);
 
@@ -47,7 +47,7 @@ void do_tracer (pid_t tracee_pid){
                 printf ("\nChild Exited with status %d \n" , WEXITSTATUS(status));
                 break;
             }
-            
+
         }
         close_logger();
     }

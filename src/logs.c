@@ -10,7 +10,7 @@ void init_logger(pid_t pid) {
     struct tm *t = localtime(&now);
 
     char filename[256];
-    strftime(filename, sizeof(filename), "trace_%Y%m%d_%H%M%S.log", t);
+    strftime(filename, sizeof(filename), "LogsFolder/Trace_%Y-%m-%d__%H-%M-%S.log", t);
 
     log_file = fopen(filename, "w");
     if (!log_file) {
